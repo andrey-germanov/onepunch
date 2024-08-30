@@ -108,7 +108,7 @@ function LogViewer() {
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
         <button onClick={toggleAutoScroll}>
-          {autoScroll ? 'Отключить авто-прокрутку' : 'Включить авто-прокрутку'}
+          {autoScroll ? 'disable auto-scroll' : 'enable auto-scroll'}
         </button>
         <button onClick={() => {
           deleteDB('logs-db')
@@ -124,7 +124,6 @@ function LogViewer() {
         }}>
           clear database
         </button>
-        {totalLogCount}
       </div>
       <div
         ref={containerRef}
