@@ -130,7 +130,7 @@ function LogViewer() {
         onScroll={(e) => {
           const scrollTop = containerRef.current?.scrollTop || 1
           const startFromItemIndex = Math.round(scrollTop / itemHeight)
-          loadLogsFromIndexedDB(startFromItemIndex, startFromItemIndex + 1000)
+          loadLogsFromIndexedDB(startFromItemIndex - 100, startFromItemIndex + 1000)
         }}
         style={{
           height: '80vh',
